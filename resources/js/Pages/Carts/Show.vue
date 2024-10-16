@@ -86,8 +86,8 @@ defineProps({
                 </div>
                 <div class="list-items flex flex-col">
                     <div v-for="item in cart" class="item sm:grid sm:grid-cols-3 sm:grid-rows-1 sm:place-items-center gap-6 mb-8 border-b-2 px-5 w-/">
-                        <div class="image max-h-48 flex justify-center mb-6 flex-col">
-                            <img :src="item.flowers.image_path" alt="flower" class="max-w-full rounded-lg">
+                        <div class="image flex justify-center mb-6 flex-col">
+                            <img :src="item.flowers.image_path" alt="flower" class="max-w-full rounded-lg max-h-[40vh]">
                             <div class="flex gap-x-3 justify-center">
                                 <button @click.prevent="plus(item)" :disabled="item.quantity >= item.flowers.quantity">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

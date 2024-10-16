@@ -82,10 +82,10 @@ defineProps({
             <img src="/images/flowers.jpg" alt="flowers" class="object-cover rounded-md">
         </div>
         <div class="flex sm:justify-end justify-center content-center gap-x-3 px-5">
-            <a href="tel:7-989-999-99-99">
+            <a href="tel:7-928-818-88-27">
                 <img width="28" height="28" src="/contacts/telephone-symbol-button.png" alt="telegram"/>
             </a>
-            <a href="https://wa.me/79999999999">
+            <a href="https://wa.me/79288188827">
                 <img width="28" height="28" src="/contacts/whatsapp.png" alt="whatsapp"/>
             </a>
             <a href="https://t.me/123?profile">
@@ -103,8 +103,8 @@ defineProps({
                         class="w-full rounded-full px-5 border-gray-100 border-solid border-b-2 hover:border-gray-300"
                     >
                 </div>
-                <div class="category flex justify-center gap-6">
-                    <div class="flex gap-3 pb-3">
+                <div class="category flex justify-center gap-2">
+                    <div class="flex gap-3 pb-3 pl-3">
                         <button type="button" @click.prevent="changeStyleList">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" :class="{'fill-red-950 stroke-red-950 stroke-2': toggleStyle}">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
@@ -116,12 +116,12 @@ defineProps({
                             </svg>
                         </button>
                     </div>
-                    <div class="flex snap-mandatory gap-3 snap-x overflow-x-auto pb-3">
-                        <button @click="scrollToCategory(category.id)" v-for="category in filteredCategories" :key="category.id" type="button" class="item rounded-full py-1 px-2 border-solid border-2 my-1 min-w-40 max-h-32">
+                    <div class="flex snap-mandatory gap-2 snap-x overflow-x-auto pb-3">
+                        <button @click="scrollToCategory(category.id)" v-for="category in filteredCategories" :key="category.id" type="button" class="item rounded-full sm:py-1 px-2 border-solid border-2 my-1 min-w-40 max-h-32 sm:text-base text-sm">
                             {{ category.name }}
                         </button>
                     </div>
-                    <div v-if="$page.props.auth.user" class="flex pt-2">
+                    <div v-if="$page.props.auth.user" class="flex sm:pt-2 pr-3 pt-1">
                         <Link :href='route("carts.show", {id: $page.props.auth.user.id})'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />

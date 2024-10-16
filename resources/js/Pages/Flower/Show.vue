@@ -6,22 +6,25 @@ export default {
 </script>
 
 <script setup>
-import {Link} from "@inertiajs/vue3";
+import {Link, router} from "@inertiajs/vue3";
 
 defineProps({
     card: Object,
 })
+const back = () => {
+    window.history.back()
+}
 </script>
 
 <template>
     <div class="max-w-screen-xl	mx-auto bg-gray-100 py-12">
         <div class="container__card flex flex-col mb-12 px-5 gap-6">
 
-            <Link :href="route('home')" class="max-w-[24px]">
+            <button @click.prevent="back" class="max-w-[24px]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
-            </Link>
+            </button>
 
             <div class="card__image flex max-h-96">
                 <img :src="card.image_path" alt="flower_image" class="object-cover rounded-md mx-auto">
